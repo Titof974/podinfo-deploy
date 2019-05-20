@@ -1,12 +1,12 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.frontend.rule.type: PathPrefixStrip
   creationTimestamp: null
   name: podinfo
   namespace: dev
-annotations:
-  kubernetes.io/ingress.class: traefik
-  traefik.frontend.rule.type: PathPrefixStrip
 spec:
   rules:
   - http:
@@ -15,7 +15,7 @@ spec:
           serviceName: podinfo
           servicePort: 9898
         path: /podinfo
-      - backend:
+      - backendmighty:
           serviceName: metricsinfo
           servicePort: 3000
         path: /mighty-fine
