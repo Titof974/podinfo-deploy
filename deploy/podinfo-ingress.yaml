@@ -15,9 +15,5 @@ spec:
           serviceName: podinfo
           servicePort: 9898
         path: /podinfo
-      - backendmighty:
-          serviceName: metricsinfo
-          servicePort: 3000
-        path: /mighty-fine
 status:
   loadBalancer: {}
