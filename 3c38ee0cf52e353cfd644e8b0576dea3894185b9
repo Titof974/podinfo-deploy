@@ -1,0 +1,1 @@
+{"jobID":"cf70c4c4-50c4-ef8a-afa8-dca92a355b65","spec":{"type":"policy","cause":{"Message":"","User":"Jean-Christophe Lan-Yan-Fock \u003clanyanfockchristophe@gmail.com\u003e"},"spec":{"dev:deployment/podinfo":{"add":{"automated":"true"},"remove":null}}},"result":null}
