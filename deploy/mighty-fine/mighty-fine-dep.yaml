@@ -4,17 +4,18 @@ apiVersion: apps/v1
 metadata:
   name: mighty-fine
   namespace: dev
-  annotations:
-    flux.weave.works/tag.podinfod: glob:*
 spec:
+spec:
+  replicas: 1
   selector:
-    replicas: 1
     matchLabels:
       app: mighty-fine
   template:
     metadata:
       labels:
         app: mighty-fine
+      annotations:
+        prometheus.io/scrape: 'true'
     spec:
       containers:
       - name: mighty-fine
