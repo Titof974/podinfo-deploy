@@ -15,8 +15,6 @@ spec:
     metadata:
       labels:
         app: mighty-fine
-      annotations:
-        prometheus.io/scrape: 'true'
     spec:
       containers:
       - name: mighty-fine
