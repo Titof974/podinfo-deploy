@@ -23,7 +23,7 @@ spec:
         image: quay.io/brice/metrics-demo:v4-subscription-service
         ports:
         - containerPort: 3000
-                readinessProbe:
+        readinessProbe:
           httpGet:
             path: /readyz
             port: 3000
