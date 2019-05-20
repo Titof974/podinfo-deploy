@@ -7,10 +7,13 @@ metadata:
   annotations:
     flux.weave.works/tag.podinfod: glob:*
 spec:
+  selector:
+    matchLabels:
+      app: mighty-fine
   template:
     metadata:
       labels:
-        app: podimighty-finenfo
+        app: mighty-fine
       annotations:
         prometheus.io/scrape: 'true'
     spec:
