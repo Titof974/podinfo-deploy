@@ -23,11 +23,7 @@ spec:
         image: quay.io/brice/metrics-demo:v4-subscription-service
         ports:
         - containerPort: 3000
-        resources:
-          requests:
-            memory: "32Mi"
-            cpu: "10m"
-         readinessProbe:
+        readinessProbe:
           httpGet:
             path: /readyz
             port: 9898
@@ -41,6 +37,10 @@ spec:
           initialDelaySeconds: 1
           periodSeconds: 10
           failureThreshold: 2
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "10m"
       - name: podinfod
         image: quay.io/stefanprodan/podinfo:1.5.1
         command:
