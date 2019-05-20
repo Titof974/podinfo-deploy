@@ -8,6 +8,7 @@ metadata:
     flux.weave.works/tag.podinfod: glob:*
 spec:
   selector:
+    replicas: 1
     matchLabels:
       app: mighty-fine
   template:
